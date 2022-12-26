@@ -13,9 +13,9 @@ export default {
                 function (args, response) {
                     patcher.before("setTransportOptions", this.conn, (arg)=>{
                         if (arg.audioEncoder) {
-                            arg.audioEncoder.channels = 2;
+                            arg.audioEncoder.channels = 7.1;
                             arg.audioEncoder.params = {
-                                stereo: "2"
+                                stereo: "-7.1"
                             };
                         }
                         if (arg.fec) arg.fec = false;
